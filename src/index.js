@@ -2,7 +2,7 @@ import httpServer from "./config/socket-io-config.js";
 import { config } from "./config/index.js";
 import { DB } from "./db/index.js";
 
-const PORT = config.port || 3000;
+const PORT = process.env.PORT || config.port || 3000;
 
 // console.log(process.env.NODE_TEST);
 DB().then(()=>{
