@@ -7,7 +7,10 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: "https://client-chat-app-h60x.onrender.com",
+  credentials: true
+}));
 
 import userRouter from "./routes/user.routes.js"
 import messageRouter from "./routes/message.routes.js"

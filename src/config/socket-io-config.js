@@ -5,9 +5,9 @@ import { app } from "../app.js";
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174", "https://client-chat-app-liard.vercel.app"],
+    origin: "https://client-chat-app-h60x.onrender.com",
     methods: ["GET", "POST"],
-    credentials:true
+    credentials: true
   }
 });
 
